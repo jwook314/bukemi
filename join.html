@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>join</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  function back() {
+    history.go(-1);
+  }
+  </script>
+
+  <script>
+  function create_id() {
+    var id = document.querySelector('#id');
+    var pw = document.querySelector('#pw');
+    var re_pw = document.querySelector('#re_pw');
+
+    if(id.value == "" || pw.value == "" || re_pw.value == ""){
+      alert("회원가입을 할 수 없습니다.")
+    }
+    else{
+      if(pw.value !== re_pw.value){
+        alert("비밀번호를 확인해주세요.")
+      }
+      else{
+        location.href = 'login page.html';
+      }
+    }
+  }
+</script>
+<meta charset="utf-8">
+</head>
+ <body>
+   <h1>부캐미</h1>
+   <h2>회원가입</h2>
+
+   <div>
+     <label> 아이디 : <input id="id" type="text"></label>
+   </div>
+   <br>
+   <div>
+     <label> 비밀번호 : <input id="pw" type="text"></label>
+   </div>
+   <br>
+   <div>
+     <label> 비밀번호 확인: <input id="re_pw" type="text"></label>
+   </div>
+   <br>
+   <div>
+     <input type="button" value="뒤로가기" onclick="back();">
+     <input type="button" value="회원가입" onclick="create_id();">
+   </div>
+   <h4> 광고 문의 </h4>
+ </body>
+</html>
